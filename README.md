@@ -1,4 +1,4 @@
-## NoteX Project workflow
+## Project workflow
 1. Fork the Repository
 2. Clone your fork
 ```
