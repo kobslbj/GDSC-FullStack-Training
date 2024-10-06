@@ -1,1 +1,2 @@
 cout << "hello gdsc" << endl;
+print("hello gdsc)
