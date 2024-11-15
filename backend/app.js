@@ -16,13 +16,18 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something broke!' });
 });
 
+const PORT = process.env.PORT || 3000;
+
 const startServer = async () => {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.authenticate();
+    console.log('Connected to the database');
+
+    await sequelize.sync({ force: false });
     console.log('Database synced');
-    
-    app.listen(3000, '0.0.0.0', () => {
-      console.log('Server is running on port 3000');
+
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   } catch (error) {
     console.error('Unable to start server:', error);
