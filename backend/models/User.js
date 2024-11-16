@@ -10,6 +10,8 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+}, {
+  underscored: true
 });
 
 module.exports = User;
