@@ -14,8 +14,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  color: var(--foreground);
-  background: var(--background);
+  /* color: var(--foreground); */
+  color: white;
+  /* background: var(--background); */
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
