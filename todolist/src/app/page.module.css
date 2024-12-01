@@ -1,9 +1,4 @@
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-}
+
 .font {
   text-align: center;
   font-weight: bold;
