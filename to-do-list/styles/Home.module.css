@@ -1,0 +1,133 @@
+body {
+  background-color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.username {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.username .logout-button {
+  font-size: 1.2em;
+  background-color: #555;
+  color: #fff;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  .title {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  
+  .todoList {
+    margin-bottom: 20px;
+  }
+  
+  .todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color:#333;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    flex-wrap: nowrap;
+  }
+  
+  .todoItem input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todoItem span {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .deleteButton,
+  .editButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .addTask {
+    padding: 15px;
+    color:#333;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin:auto;
+    width: 60%;
+    max-width: 400px;
+  }
+  
+  .addTask input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 0;
+    background-color: #ffffff;
+    color: #555;
+  }
+
+  .addTask textarea {
+    width: 100%;
+    max-height: 200px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #555;
+  }
+  
+  .addTask button {
+    width:40%;
+    padding: 10px;
+    margin-left: 60%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .divider {
+    height: 1px; /* 分隔線的高度 */
+    background-color: #ccc;
+    border: none;
+    width: 100%;
+  }
+  
