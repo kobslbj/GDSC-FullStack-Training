@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
-import Todoitem from "@/components/Todoitem";
+import { Appbar, Todoitem } from "@/components";
 
 export default function Home() {
   const [todos, setTodos] = useState([]);
@@ -24,12 +24,9 @@ export default function Home() {
   };
 
   return (
-    <body>
+    <div className={styles.page}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-      <div className={styles.appbar}>
-        <div className={`${styles.font} ${styles.title} ${styles.user}`}>Hi Justin~</div>
-        <button className={`${styles.font} ${styles.logout}`}>Logout</button>
-      </div>
+      <Appbar/>
       <div className={styles.container}>
         <div className={styles.windows}>
           <div className={`${styles.font} ${styles.title}`}>To Do List</div>
@@ -48,6 +45,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
