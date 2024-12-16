@@ -81,7 +81,7 @@
   border: none;
   background-color: transparent;
 }
-.delete i:hover {
+.delete:hover {
   color: red;
 }
 
