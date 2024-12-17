@@ -1,0 +1,39 @@
+.font {
+    text-align: center;
+    font-weight: bold;
+}
+
+.font.title {
+    color: white;
+    font-size: 30px;
+}
+
+.font.subtile {
+    color: black;
+    font-size: 30px;
+}
+
+.appbar {
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user {
+    margin: 15px 50px;
+}
+
+.logout {
+    font-size: 20px;
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(113, 113, 113);
+    border-radius: 12px;
+}
+
+.logout:active {
+    background-color: rgb(68, 68, 68);
+}

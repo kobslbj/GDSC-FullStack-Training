@@ -1,2 +1,3 @@
 cout << "hello gdsc" << endl;
-print("hello gdsc)
+print("hello gdsc")
+System.out.println("hello gdsc");
