@@ -45,10 +45,10 @@
 .list {
   flex-grow: 1;
   width: 100%;
+  overflow-y: auto;     /* todo: auto or scroll? */
 }
 
 .list ul {
-  padding: 0%;
   width: auto;
   list-style-type: none;
 }
@@ -109,6 +109,7 @@
   padding: 5px;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect to make it stand out */
 
   display: flex;
   flex-direction: column;
