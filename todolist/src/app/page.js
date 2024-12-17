@@ -3,10 +3,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
-import { Appbar, Todoitem } from "@/components";
+import { Appbar, Todoitem, CreateTaskWindows } from "@/components";
 
 export default function Home() {
   const [todos, setTodos] = useState([]);
+  const [isTaskWindowsVisible, setVisible] = useState(false);
+  const [taskName, setTaskName] = useState("");
+  const [taskDescription, setDescription] = useState("");
 
   const addTodo = () => {
     var id = todos.length ? ((todos.at(-1)).id + 1) : 0;
@@ -14,14 +17,26 @@ export default function Home() {
 
     var newTodo = {
       id: id,
-      name: name
+      name: taskName
     };
+
+    setVisible(false);
+    setTaskName("");
+    setDescription("");
 
     return setTodos([
       ...todos,
       newTodo
     ]);
   };
+
+  const setWindowsVisible = () => {
+    setVisible(!isTaskWindowsVisible);
+    if(isTaskWindowsVisible){
+      setTaskName("");
+      setDescription("");
+    }
+  }
 
   return (
     <div className={styles.page}>
@@ -39,10 +54,23 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <button type="submit" className={styles.btn} onClick={addTodo}>
+
+          {isTaskWindowsVisible && (
+            <CreateTaskWindows
+              taskName={taskName}
+              setTaskName={setTaskName}
+              desciption={taskDescription}
+              setDescription={setDescription}
+              addTodoCB={addTodo}
+            />
+          )}
+
+          <button type="submit" className={styles.btn} onClick={setWindowsVisible}>
             <i className="fa fa-plus"></i>
             <div className={styles.create_btn}>Create new task</div>
           </button>
+
+          
         </div>
       </div>
     </div>
