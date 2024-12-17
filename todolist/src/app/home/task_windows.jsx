@@ -1,8 +1,8 @@
 import { useState } from "react";
-import styles from "@/app/page.module.css";
+import styles from "./page.module.css";
 
-export default function CreateTaskWindows({taskName, setTaskName, desciption, setDescription, addTodoCB}) {
-    // const [item, setItem] = useState(todo)
+export default function TaskWindows({taskName, setTaskName, description, setDescription, addTodoCB}) {
+    const isFormValid = (taskName.trim() !== "" && description.trim() !== "");
 
     return (
         <div className={styles.create_windows}>
@@ -17,12 +17,12 @@ export default function CreateTaskWindows({taskName, setTaskName, desciption, se
             <div className={`${styles.font}`}>Description</div>
             <input
                 type="text"
-                value={desciption}
+                value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 // placeholder="Enter task name"
                 className={`${styles.task_input} ${styles.desciption}`}
             />
-            <button type="submit" className={styles.task_btn} onClick={addTodoCB} disabled={!taskName.trim()}>Add Task</button>
+            <button type="submit" className={styles.task_btn} onClick={addTodoCB} disabled={!isFormValid}>Add Task</button>
         </div>
     );
 }
