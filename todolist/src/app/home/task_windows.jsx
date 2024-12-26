@@ -1,4 +1,5 @@
 import { useState } from "react";
+import globalstyles from "@/app/page.module.css";
 import styles from "./page.module.css";
 
 export default function TaskWindows({taskName, setTaskName, description, setDescription, addTodoCB}) {
@@ -6,7 +7,7 @@ export default function TaskWindows({taskName, setTaskName, description, setDesc
 
     return (
         <div className={styles.create_windows}>
-            <div className={`${styles.font} ${styles.subtitle}`}>Task Name</div>
+            <div className={`${globalstyles.font} ${globalstyles.subtitle}`}>Task Name</div>
             <input
                 type="text"
                 value={taskName}
@@ -14,7 +15,7 @@ export default function TaskWindows({taskName, setTaskName, description, setDesc
                 placeholder="Enter task name"
                 className={`${styles.task_input} ${styles.taskname}`}
             />
-            <div className={`${styles.font}`}>Description</div>
+            <div className={`${globalstyles.font}`}>Description</div>
             <input
                 type="text"
                 value={description}

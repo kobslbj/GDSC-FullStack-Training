@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import globalstyles from "@/app/page.module.css";
 import styles from "./page.module.css";
 import { useState } from "react";
 import { Appbar } from "@/components";
@@ -33,19 +34,19 @@ export default function Home() {
 
   const setWindowsVisible = () => {
     setVisible(!isTaskWindowsVisible);
-    if(isTaskWindowsVisible){
+    if (isTaskWindowsVisible) {
       setTaskName("");
       setDescription("");
     }
   }
 
   return (
-    <div className={styles.page}>
+    <div className={globalstyles.page}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-      <Appbar/>
-      <div className={styles.container}>
-        <div className={styles.windows}>
-          <div className={`${styles.font} ${styles.title}`}>To Do List</div>
+      <Appbar />
+      <div className={globalstyles.container}>
+        <div className={globalstyles.windows}>
+          <div className={`${globalstyles.font} ${globalstyles.title}`}>To Do List</div>
           <div className={styles.list}>
             <ul id="ul">
               {todos.map((todo) => (
@@ -71,7 +72,7 @@ export default function Home() {
             <div className={styles.create_btn}>Create new task</div>
           </button>
 
-          
+
         </div>
       </div>
     </div>
