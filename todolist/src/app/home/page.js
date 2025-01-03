@@ -19,17 +19,18 @@ export default function Home() {
 
     var newTodo = {
       id: id,
-      name: taskName
+      name: taskName,
+      description: taskDescription,
+      isComplete: false,
     };
+
+    setTodos([...todos, newTodo]);
 
     setVisible(false);
     setTaskName("");
     setDescription("");
 
-    return setTodos([
-      ...todos,
-      newTodo
-    ]);
+    // sessionStorage.setItem(`taskData_${newTodo.id}`, JSON.stringify(newTodo))
   };
 
   const setWindowsVisible = () => {
