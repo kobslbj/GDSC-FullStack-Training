@@ -12,7 +12,6 @@ app.get("/todos", (req, res) => {
 
 app.get("/todos/:id", (req, res) => {
   const todo = todos.find(t => t.id === parseInt(req.params.id));
-  if (!todo) return res.status(404).json({ error: "Todo not found" });
   res.json(todo);
 });
 
@@ -41,7 +40,7 @@ app.delete("/todos/:id", (req, res) => {
   if (index === -1) return res.status(404).json({ error: "Todo not found" });
 
   todos.splice(index, 1);
-  res.json({ message: "Todo deleted successfully" });
+  res.json({ message: `Todo ${req.params.id} deleted` });
 });
 
 app.listen(PORT, () => {
