@@ -1,27 +1,23 @@
-body {
-  background-color: #333;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
 .username {
-  font-size: 1.2em;
+  font-size: 1.0em;
+  font-weight: bold;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 20px;
   gap: 10px;
-  background-color: #333;
   color: #fff;
 }
 
-.username .logout-button {
-  font-size: 1.2em;
+.username .logoutButton {
+  font-size: 0.8em;
+  font-weight: bold;
   background-color: #555;
   color: #fff;
-  padding: 15px 5px;
+  padding: 8px 8px;
+  width: 100px;
+  border-radius: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -70,16 +66,110 @@ body {
     align-items: center;
     margin-left: auto;
   }
+
+  .editContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
   
-  .deleteButton,
-  .editButton {
+  .editTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .editInput,
+  .editTextarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .editTextarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 12px;
+    gap: 5px;
+  }
+
+  .saveButton,
+  .cancelButton {
+    max-width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+  }
+
+  .saveButton {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .cancelButton {
+    background-color: #888;
+    color: white;
+  }
+
+  .deleteButton {
     background: none;
     border: none;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
   }
+
+  .completeButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .completed {
+    background-color: #4CAF50; /* 綠色 */
+  }
   
+  .incomplete {
+    background-color: #ffcc00; /* 黃色 */
+  }
+
+  .backButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
   .addTask {
     padding: 15px;
     color:#333;
@@ -92,10 +182,9 @@ body {
   
   .addTask input {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 5px;
     padding: 10px;
-    border: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background-color: #ffffff;
     color: #555;
   }
