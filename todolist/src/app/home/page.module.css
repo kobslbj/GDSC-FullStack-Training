@@ -1,0 +1,106 @@
+/* todolist */
+.list {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;     /* todo: auto or scroll? */
+}
+
+.list ul {
+  width: auto;
+  list-style-type: none;
+}
+
+.mission {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  margin-left: 5px;
+
+  flex-grow: 1;
+  text-align: left;
+  text-overflow: clip;
+}
+
+.delete {
+  border: none;
+  background-color: transparent;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.btn {
+  height: 48px;
+  width: 60%;
+  padding: 0 24px 0 16px;
+  border-radius: 20px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  align-self: center;
+}
+
+.btn:active {
+  background-color: darkgray;
+}
+
+.create_btn {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.create_windows {
+  width: 70%;
+  max-width: 400px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect to make it stand out */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.task_input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.task_input.taskname {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid lightgray;
+}
+
+.task_input.description {
+  border-radius: 10px;
+}
+
+.task_btn {
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  padding: 3px 7px;
+
+  align-self: flex-end;
+}
+
+.task_btn:disabled {
+  background-color: darkblue;
+}
